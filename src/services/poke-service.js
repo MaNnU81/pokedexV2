@@ -10,6 +10,7 @@ export default class PokeService {
 
     getPokemonData(){
         const url = PokeService.POKEMON_URL + '?limit=' + this.limit + '&offset=' + this.offset;
+        console.log(url);
          return fetch(url)
         .then(res => res.json())
         .then(data => {
